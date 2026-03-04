@@ -47,3 +47,8 @@ y = df["Filter (adc)"].values
 
 print('\nValores de X:', x[:20])
 print('\nValores de y:', y[:20])
+
+base_dir = os.path.dirname(os.path.abspath(__file__))
+output_path = os.path.join(base_dir, 'dataset_processado.csv')
+df.to_csv(output_path, index=False)
+print('\nDataset processado salvo como dataset_processado.csv')
