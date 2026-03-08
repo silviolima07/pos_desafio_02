@@ -1,0 +1,15 @@
+Use para eixo X: time_since_reaction_(ms)
+Use para Eixo Y: filter_(adc)
+
+
+Exemplo:
+dados = pd.DataFrame({
+    "time_ms": np.array(item['data INT']["time_since_reaction_(ms)"]),
+    "adc": np.array(item['data INT']["filter_(adc)"])
+})
+
+x = dados["time_ms"].values
+y = dados["adc"].values
+
+
+ATENÇÃO, OS VALORES ESTÃO EM HEXADECIMAL, PRECISA CONVERTE-LOS PARA INTEIROS
